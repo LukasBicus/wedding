@@ -19,6 +19,12 @@
     "react-helmet": "^5.2.1"
   },
   "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.3.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.17.2",
+    "eslint-plugin-react": "^7.13.0",
+    "pre-commit": "^1.2.2",
     "prettier": "^1.17.1"
   },
   "keywords": [
@@ -27,12 +33,14 @@
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
+    "eslint": "eslint src/**/*.js",
     "develop": "gatsby develop",
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
   },
+  "pre-commit": "eslint",
   "repository": {
     "type": "git",
     "url": "https://github.com/gatsbyjs/gatsby-starter-default"
