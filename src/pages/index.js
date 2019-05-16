@@ -20,6 +20,9 @@ const StyledImg = styled(Img)`
 const StyledH1 = styled(H1)`
   color: ${theme.colors.WHITE};
 `
+const StyledH3 = styled(H3)`
+  color: ${theme.colors.WHITE};
+`
 
 const IndexPage = () => (
   <Layout>
@@ -42,8 +45,8 @@ const IndexPage = () => (
       }
     >
       <StyledH1>Janka a Lukáš</StyledH1>
-      <H3>22.2.2020</H3>
-      <H3>Krompachy</H3>
+      <StyledH3>22.2.2020</StyledH3>
+      <StyledH3>Krompachy</StyledH3>
     </Hero>
     <Section id={SECTION_ID.PROGRAM} title="Program" hasDarkBackground>
       <div>Cas: Aktivita: Miesto</div>
