@@ -5,7 +5,9 @@ export const SECTION_ID = {
   PROGRAM: 'program',
   VENUE: 'venue',
   CHURCH: 'kostol',
-  ACCOMMODATION: 'ubytovanie'
+  ACCOMMODATION: 'ubytovanie',
+  TRANSPORT: 'doprava',
+  SEATING_PLAN: 'zasadaci-poriadok'
 }
 
 export const routes = {
