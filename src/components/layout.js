@@ -36,9 +36,7 @@ const Layout = ({ children }) => (
         <Header siteTitle={data.site.siteMetadata.title} />
         <main>{children}</main>
         <StyledFooter>
-          <Text.S>
-            © {new Date().getFullYear()}, vytvoril <a href="https://www.gatsbyjs.org">Lukáš Bičuš</a>
-          </Text.S>
+          <Text.S>2019, Lukáš Bičuš</Text.S>
         </StyledFooter>
       </>
     )}
