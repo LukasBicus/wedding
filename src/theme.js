@@ -34,13 +34,16 @@ export default {
   },
   media: {
     mobile: (...args) =>
-      css`@media (max-width: ${MOBILE_THRESHOLD}px) {
-        ${css(...args)}
-      }
-    `,
+      css`
+        @media (max-width: ${MOBILE_THRESHOLD}px) {
+          ${css(...args)}
+        }
+      `,
     desktop: (...args) =>
-      css`@media (min-width: ${MOBILE_THRESHOLD + 1}px) {
-        ${css(...args)}
-      }`
+      css`
+        @media (min-width: ${MOBILE_THRESHOLD + 1}px) {
+          ${css(...args)}
+        }
+      `
   }
 }

@@ -44,7 +44,7 @@ const Hero = ({ children, backgroundImage, continueToId }) => (
           scrollToElement(continueToId)
         }}
       >
-        <FaChevronCircleDown size="3.5rem"/>
+        <FaChevronCircleDown size="3.5rem" />
       </StyledLink>
     </ContentWrapper>
   </Wrapper>

@@ -8,41 +8,42 @@ import { SECTION_ID } from '../constants'
 import Hero from '../components/basic/Hero'
 import Section from '../components/basic/Section'
 import BackgroundImage from '../components/basic/BackgroundImage'
-import { H1 } from '../components/basic/Typography'
+import { H1, H3 } from '../components/basic/Typography'
 import theme from '../theme'
 
 const StyledImg = styled(Img)`
   display: block;
   width: 100%;
   height: 100%;
-  position: absolute;
-  top: 0;
 `
 
 const StyledH1 = styled(H1)`
-  color: ${theme.colors.WHITE}
+  color: ${theme.colors.WHITE};
 `
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" keywords={['lukas bicus', 'janka kolesarova', 'svadba']}/>
-    <div id={SECTION_ID.HOME}/>
+    <SEO title="Home" keywords={['lukas bicus', 'janka kolesarova', 'svadba']} />
+    <div id={SECTION_ID.HOME} />
     <Hero
       continueToId={SECTION_ID.PROGRAM}
-      backgroundImage={(
+      backgroundImage={
         <BackgroundImage
           render={data => (
-            <StyledImg fluid={data.placeholderImage.childImageSharp.fluid} style={{
-              position: 'absolute',
-              top: 0
-            }}/>
+            <StyledImg
+              fluid={data.placeholderImage.childImageSharp.fluid}
+              style={{
+                position: 'absolute',
+                top: 0
+              }}
+            />
           )}
         />
-      )}
+      }
     >
-      <StyledH1>Janka a Lukas</StyledH1>
-      <h3>22.2.2020</h3>
-      <h3>Krompachy</h3>
+      <StyledH1>Janka a Lukáš</StyledH1>
+      <H3>22.2.2020</H3>
+      <H3>Krompachy</H3>
     </Hero>
     <Section id={SECTION_ID.PROGRAM} title="Program" hasDarkBackground>
       <div>Cas: Aktivita: Miesto</div>
@@ -53,8 +54,7 @@ const IndexPage = () => (
     <Section id={SECTION_ID.VENUE} title="Melodia">
       nieco o melodii
     </Section>
-    <Section
-      id={SECTION_ID.CHURCH} title="Kostol" hasDarkBackground>
+    <Section id={SECTION_ID.CHURCH} title="Kostol" hasDarkBackground>
       nieco o kostole
     </Section>
     <Section id={SECTION_ID.ACCOMMODATION} title="Ubytovanie">
