@@ -8,15 +8,7 @@ export default {
     BRIDESMAID: '#feede5', // pozadie
     TURKISH_ROSE: '#b06e8a',
     VIOLA: '#c88eaa',
-    WHITE: '#FFFFFF',
-    // obsolete:
-    ASTRONAUT_BLUE: '#004165',
-    BURGUNDY: '#772432',
-    CARDINAL: '#CD202C',
-    EDWARD: '#A9B2B1',
-    GALLERY: '#EEEEEE',
-    GOLDEN_SAND: '#F2DF74'
-    //
+    WHITE: '#FFFFFF'
   },
   shadow: {
     BOTTOM: '0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12)'
