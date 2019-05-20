@@ -10,7 +10,8 @@ import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
 import styled from 'styled-components'
 import Header from './custom/Header'
-import { Text } from './basic/Typography'
+import ExternalLink from './basic/ExternalLink'
+import theme from '../theme'
 
 const StyledFooter = styled.footer`
   display: flex;
@@ -18,6 +19,9 @@ const StyledFooter = styled.footer`
   width: 100%;
   justify-content: center;
   text-align: center;
+  ${theme.media.mobile`
+    flex-direction: column;
+  `};
 `
 
 const Layout = ({ children }) => (
@@ -36,7 +40,10 @@ const Layout = ({ children }) => (
         <Header siteTitle={data.site.siteMetadata.title} />
         <main>{children}</main>
         <StyledFooter>
-          <Text.S>2019, Lukáš Bičuš</Text.S>
+          <ExternalLink to="https://github.com/LukasBicus">2019, Lukáš Bičuš</ExternalLink>
+          <ExternalLink to="https://unsplash.com/@tombrand?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge">
+            Photo by Tomasz Filipek on Unsplash
+          </ExternalLink>
         </StyledFooter>
       </>
     )}

@@ -44,7 +44,9 @@ const IndexPage = () => (
         />
       }
     >
-      <StyledH1>Janka a Lukáš</StyledH1>
+      <StyledH1>Janka Kolesárová</StyledH1>
+      <StyledH1> & </StyledH1>
+      <StyledH1>Lukáš Bičuš</StyledH1>
       <StyledH3>22.2.2020</StyledH3>
       <StyledH3>Krompachy</StyledH3>
     </Hero>
