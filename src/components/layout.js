@@ -41,9 +41,6 @@ const Layout = ({ children }) => (
         <main>{children}</main>
         <StyledFooter>
           <ExternalLink to="https://github.com/LukasBicus">2019, Lukáš Bičuš</ExternalLink>
-          <ExternalLink to="https://unsplash.com/@tombrand?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge">
-            Photo by Tomasz Filipek on Unsplash
-          </ExternalLink>
         </StyledFooter>
       </>
     )}

@@ -8,7 +8,7 @@ import { SECTION_ID } from '../constants'
 import Hero from '../components/basic/Hero'
 import Section from '../components/basic/Section'
 import BackgroundImage from '../components/basic/BackgroundImage'
-import { H1, H3 } from '../components/basic/Typography'
+import { H1, H3, Text } from '../components/basic/Typography'
 import theme from '../theme'
 
 const StyledImg = styled(Img)`
@@ -18,10 +18,13 @@ const StyledImg = styled(Img)`
 `
 
 const StyledH1 = styled(H1)`
-  color: ${theme.colors.WHITE};
+  color: ${theme.colors.TURKISH_ROSE};
 `
 const StyledH3 = styled(H3)`
-  color: ${theme.colors.WHITE};
+  color: ${theme.colors.TURKISH_ROSE};
+`
+const BottomH3 = styled(StyledH3)`
+  padding-bottom: 15rem
 `
 
 const IndexPage = () => (
@@ -44,32 +47,44 @@ const IndexPage = () => (
         />
       }
     >
-      <StyledH1>Janka Kolesárová</StyledH1>
-      <StyledH1> & </StyledH1>
-      <StyledH1>Lukáš Bičuš</StyledH1>
-      <StyledH3>22.2.2020</StyledH3>
-      <StyledH3>Krompachy</StyledH3>
+        <StyledH1>Janka Kolesárová</StyledH1>
+        <StyledH1> & </StyledH1>
+        <StyledH1>Lukáš Bičuš</StyledH1>
+        <StyledH3>22.2.2020</StyledH3>
+        <BottomH3>Krompachy</BottomH3>
     </Hero>
     <Section id={SECTION_ID.PROGRAM} title="Program" hasDarkBackground>
-      <div>Cas: Aktivita: Miesto</div>
-      <div>Cas: Aktivita: Miesto</div>
-      <div>Cas: Aktivita: Miesto</div>
-      <div>Cas: Aktivita: Miesto</div>
+      <Text.S>
+        <div>Cas: Aktivita: Miesto</div>
+        <div>Cas: Aktivita: Miesto</div>
+        <div>Cas: Aktivita: Miesto</div>
+        <div>Cas: Aktivita: Miesto</div>
+      </Text.S>
     </Section>
     <Section id={SECTION_ID.VENUE} title="Melodia">
-      nieco o melodii
+      <Text.S>
+        nieco o melodii
+      </Text.S>
     </Section>
     <Section id={SECTION_ID.CHURCH} title="Kostol" hasDarkBackground>
-      nieco o kostole
+      <Text.S>
+        nieco o kostole
+      </Text.S>
     </Section>
     <Section id={SECTION_ID.ACCOMMODATION} title="Ubytovanie">
-      nieco o ubytovanie
+      <Text.S>
+        nieco o ubytovanie
+      </Text.S>
     </Section>
     <Section id={SECTION_ID.TRANSPORT} title="Doprava" hasDarkBackground>
-      nieco o doprave
+      <Text.S>
+        nieco o doprave
+      </Text.S>
     </Section>
     <Section id={SECTION_ID.SEATING_PLAN} title="Zasadaci poriadok">
-      nieco o zasadacom poriadku
+      <Text.S>
+        nieco o zasadacom poriadku
+      </Text.S>
     </Section>
   </Layout>
 )

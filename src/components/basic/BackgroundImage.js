@@ -6,9 +6,9 @@ const BackgroundImage = ({ render }) => (
   <StaticQuery
     query={graphql`
       query {
-        placeholderImage: file(relativePath: { eq: "rose2.jpg" }) {
+        placeholderImage: file(relativePath: { eq: "rose3.jpg" }) {
           childImageSharp {
-            fluid(maxWidth: 300) {
+            fluid(maxWidth: 1600) {
               ...GatsbyImageSharpFluid
             }
           }

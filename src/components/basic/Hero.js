@@ -19,19 +19,13 @@ const ContentWrapper = styled.div`
   align-items: center;
   text-align: center;
   position: relative;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
 `
 
 const StyledLink = styled.a`
   color: ${theme.colors.WHITE};
   cursor: pointer;
-  ${theme.media.desktop`
-    position: absolute;
-    bottom: 30px;
-  `}
-  ${theme.media.mobile`
-    margin-top: 30px;
-  `}
+  position: absolute;
+  bottom: 30px;
 `
 
 const Hero = ({ children, backgroundImage, continueToId }) => (
