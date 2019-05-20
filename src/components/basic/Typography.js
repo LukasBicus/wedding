@@ -3,7 +3,7 @@ import { space } from 'styled-system'
 import theme from '../../theme'
 
 const defaultTextConfig = {
-  fontFamily: theme.fontFamily.LATO,
+  fontFamily: theme.fontFamily.RALEWAY,
   tagName: 'span',
   fontSize: theme.fontSize.M
 }
@@ -12,7 +12,7 @@ const createText = ({ fontFamily, tagName, fontSize }) => styled(tagName)`
   display: inline-block;
   font-family: ${fontFamily};
   font-size: ${fontSize}px;
-  font-weight: ${({ isBold }) => (isBold ? 'bold' : 'lighter')};
+  font-weight: ${({ isBold }) => (isBold ? 400 : 100)};
   ${space}
 `
 
@@ -26,19 +26,16 @@ export const Text = {
 
 export const H1 = createText({
   ...defaultTextConfig,
-  fontFamily: theme.fontFamily.MONSERRAT,
   tagName: 'h1',
   fontSize: theme.fontSize.H1
 })
 export const H2 = createText({
   ...defaultTextConfig,
-  fontFamily: theme.fontFamily.MONSERRAT,
   tagName: 'h2',
   fontSize: theme.fontSize.H2
 })
 export const H3 = createText({
   ...defaultTextConfig,
-  fontFamily: theme.fontFamily.MONSERRAT,
   tagName: 'h3',
   fontSize: theme.fontSize.H3
 })

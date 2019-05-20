@@ -14,8 +14,7 @@ export default {
     BOTTOM: '0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12)'
   },
   fontFamily: {
-    MONSERRAT: '"Monserrat", sans-serif',
-    LATO: '"Lato", sans-serif'
+    RALEWAY: 'Raleway, sans-serif'
   },
   fontSize: {
     H1: 64,
