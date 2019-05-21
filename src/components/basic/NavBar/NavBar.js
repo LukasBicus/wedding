@@ -9,7 +9,6 @@ import NavLink from './NavLink'
 const Wrapper = styled.div`
   width: 100%;
   height: ${NAVIGATION_HEIGHT}px;
-  position: fixed;
   z-index: 1;
   top: 0;
   display: flex;
@@ -17,9 +16,10 @@ const Wrapper = styled.div`
   flex-direction: row;
   background-color: ${theme.colors.TURKISH_ROSE};
   box-shadow: ${theme.shadow.BOTTOM};
+  justify-content: space-between;
   ${theme.media.mobile`
-    justify-content: space-between;
-  `}
+    position: relative;
+  `};
 `
 
 const LinksWrapper = styled.div`
@@ -69,13 +69,12 @@ class NavBar extends React.Component {
     })
   }
   render() {
-    const { children, logo } = this.props
+    const { children } = this.props
     const { isMobileMenuOpen } = this.state
     return (
       <React.Fragment>
         <StyledShadow isOpen={isMobileMenuOpen} onClick={this.handleCloseMenuClick} />
         <Wrapper>
-          {logo}
           <LinksWrapper isOpen={isMobileMenuOpen} onClick={this.handleCloseMenuClick}>
             {children}
           </LinksWrapper>
@@ -91,8 +90,7 @@ class NavBar extends React.Component {
 }
 
 NavBar.propTypes = {
-  children: PropTypes.node,
-  logo: PropTypes.node
+  children: PropTypes.node
 }
 
 NavBar.Link = NavLink

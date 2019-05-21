@@ -12,6 +12,7 @@ import styled from 'styled-components'
 import Header from './custom/Header'
 import ExternalLink from './basic/ExternalLink'
 import theme from '../theme'
+import { H1 } from './basic/Typography'
 
 const StyledFooter = styled.footer`
   display: flex;
@@ -22,6 +23,25 @@ const StyledFooter = styled.footer`
   ${theme.media.mobile`
     flex-direction: column;
   `};
+`
+
+const Wrapper = styled.div`
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  position: relative;
+`
+
+const Main = styled.main`
+  overflow-y: auto;
+  width: 100%;
+  flex-grow: 1;
+  flex-direction: column;
+  display: flex;
+`
+const ChildrenWrapper = styled.div`
+  flex-grow: 1;
 `
 
 const Layout = ({ children }) => (
@@ -36,13 +56,69 @@ const Layout = ({ children }) => (
       }
     `}
     render={data => (
-      <>
+      <Wrapper>
         <Header siteTitle={data.site.siteMetadata.title} />
-        <main>{children}</main>
-        <StyledFooter>
-          <ExternalLink to="https://github.com/LukasBicus">2019, Lukáš Bičuš</ExternalLink>
-        </StyledFooter>
-      </>
+        <Main>
+          <ChildrenWrapper>
+            {children}
+            <div>
+              <H1>
+                janko
+              </H1>
+            </div>
+            <div>
+              <H1>
+                janko
+              </H1>
+            </div>
+            <div>
+              <H1>
+                janko
+              </H1>
+            </div>
+            <div>
+              <H1>
+                janko
+              </H1>
+            </div>
+            <div>
+              <H1>
+                janko
+              </H1>
+            </div>
+            <div>
+              <H1>
+                janko
+              </H1>
+            </div>
+            <div>
+              <H1>
+                janko
+              </H1>
+            </div>
+            <div>
+              <H1>
+                janko
+              </H1>
+            </div>
+            <div>
+              <H1>
+                janko
+              </H1>
+            </div>
+            <H1>
+              janko
+            </H1>
+            <H1>
+              janko
+            </H1>
+
+          </ChildrenWrapper>
+          <StyledFooter>
+            <ExternalLink to="https://github.com/LukasBicus">2019, Lukáš Bičuš</ExternalLink>
+          </StyledFooter>
+        </Main>
+      </Wrapper>
     )}
   />
 )

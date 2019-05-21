@@ -4,7 +4,6 @@ import styled from 'styled-components'
 import { space } from 'styled-system'
 import { H2 } from './Typography'
 import theme from '../../theme'
-import { NAVIGATION_HEIGHT } from '../../constants'
 
 const Wrapper = styled.div`
   background: ${({ hasDarkBackground }) =>
@@ -28,15 +27,9 @@ const StyledTitle = styled(H2)`
   `}
 `
 
-const NavigationElement = styled.div`
-  position: absolute;
-  top: -${NAVIGATION_HEIGHT}px;
-`
-
 const Section = ({ id, title, children, hasDarkBackground, ...props }) => (
-  <Wrapper hasDarkBackground={hasDarkBackground} {...props}>
+  <Wrapper id={id} hasDarkBackground={hasDarkBackground} {...props}>
     {title && <StyledTitle>{title}</StyledTitle>}
-    {id && <NavigationElement id={id} />}
     <div>{children}</div>
   </Wrapper>
 )

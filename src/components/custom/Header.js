@@ -1,17 +1,17 @@
 import React from 'react'
-// import PropTypes from 'prop-types'
 import NavBar from '../basic/NavBar'
 import NavLink from './NavLink'
-import { SECTION_ID } from '../../constants'
+import { routes } from '../../constants'
 
 const Header = () => (
-  <NavBar logo={<NavLink toId={SECTION_ID.HOME}>Domov</NavLink>}>
-    <NavLink toId={SECTION_ID.PROGRAM}>Program</NavLink>
-    <NavLink toId={SECTION_ID.VENUE}>Melodia</NavLink>
-    <NavLink toId={SECTION_ID.CHURCH}>Kostol</NavLink>
-    <NavLink toId={SECTION_ID.ACCOMMODATION}>Ubytovanie</NavLink>
-    <NavLink toId={SECTION_ID.TRANSPORT}>Doprava</NavLink>
-    <NavLink toId={SECTION_ID.SEATING_PLAN}>Zasadaci poriadok</NavLink>
+  <NavBar>
+    <NavLink to={routes.HOME}>Domov</NavLink>
+    <NavLink to={routes.PROGRAM}>Program</NavLink>
+    <NavLink to={routes.VENUE}>Melodia</NavLink>
+    <NavLink to={routes.CHURCH}>Kostol</NavLink>
+    <NavLink to={routes.ACCOMMODATION}>Ubytovanie</NavLink>
+    <NavLink to={routes.TRANSPORT}>Doprava</NavLink>
+    <NavLink to={routes.SEATING_PLAN}>Zasadaci poriadok</NavLink>
   </NavBar>
 )
 
