@@ -12,7 +12,6 @@ import styled from 'styled-components'
 import Header from './custom/Header'
 import ExternalLink from './basic/ExternalLink'
 import theme from '../theme'
-import { H1 } from './basic/Typography'
 
 const StyledFooter = styled.footer`
   display: flex;
@@ -59,61 +58,7 @@ const Layout = ({ children }) => (
       <Wrapper>
         <Header siteTitle={data.site.siteMetadata.title} />
         <Main>
-          <ChildrenWrapper>
-            {children}
-            <div>
-              <H1>
-                janko
-              </H1>
-            </div>
-            <div>
-              <H1>
-                janko
-              </H1>
-            </div>
-            <div>
-              <H1>
-                janko
-              </H1>
-            </div>
-            <div>
-              <H1>
-                janko
-              </H1>
-            </div>
-            <div>
-              <H1>
-                janko
-              </H1>
-            </div>
-            <div>
-              <H1>
-                janko
-              </H1>
-            </div>
-            <div>
-              <H1>
-                janko
-              </H1>
-            </div>
-            <div>
-              <H1>
-                janko
-              </H1>
-            </div>
-            <div>
-              <H1>
-                janko
-              </H1>
-            </div>
-            <H1>
-              janko
-            </H1>
-            <H1>
-              janko
-            </H1>
-
-          </ChildrenWrapper>
+          <ChildrenWrapper>{children}</ChildrenWrapper>
           <StyledFooter>
             <ExternalLink to="https://github.com/LukasBicus">2019, Lukáš Bičuš</ExternalLink>
           </StyledFooter>

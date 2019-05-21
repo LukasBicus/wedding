@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import { FaChevronCircleDown } from 'react-icons/fa'
 import theme from '../../theme'
 import { NAVIGATION_HEIGHT } from '../../constants'
+import { scrollToElement } from '../../utils'
 
 const Wrapper = styled.div`
   position: relative;
@@ -28,12 +29,16 @@ const StyledLink = styled.a`
   bottom: 30px;
 `
 
-const Hero = ({ children, backgroundImage, continueTo }) => (
+const Hero = ({ children, backgroundImage, continueToId }) => (
   <Wrapper>
     {backgroundImage}
     <ContentWrapper>
       {children}
-      <StyledLink href={continueTo}>
+      <StyledLink
+        onClick={() => {
+          scrollToElement(continueToId)
+        }}
+      >
         <FaChevronCircleDown size="3.5rem" />
       </StyledLink>
     </ContentWrapper>
@@ -43,7 +48,7 @@ const Hero = ({ children, backgroundImage, continueTo }) => (
 Hero.propTypes = {
   children: PropTypes.node.isRequired,
   backgroundImage: PropTypes.node,
-  continueTo: PropTypes.string.isRequired
+  continueToId: PropTypes.string.isRequired
 }
 
 export default Hero

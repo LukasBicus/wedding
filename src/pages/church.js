@@ -1,14 +1,14 @@
 import React from 'react'
-import Layout from '../components/layout'
 import SEO from '../components/seo'
+import Layout from '../components/layout'
 
-const Venue = () => (
+const Church = () => (
   <Layout>
     <SEO title="Sxxx" keywords={['lukas bicus', 'janka kolesarova', 'svadba', 'sxxx']} />
-    Melodia
+    Kostol
   </Layout>
 )
 
-Venue.propTypes = {}
+Church.propTypes = {}
 
-export default Venue
+export default Church

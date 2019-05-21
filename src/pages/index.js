@@ -4,7 +4,7 @@ import Img from 'gatsby-image'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
-import { routes, SECTION_ID } from '../constants'
+import { SECTION_ID } from '../constants'
 import Hero from '../components/basic/Hero'
 import Section from '../components/basic/Section'
 import BackgroundImage from '../components/basic/BackgroundImage'
@@ -32,7 +32,7 @@ const IndexPage = () => (
     <SEO title="Home" keywords={['lukas bicus', 'janka kolesarova', 'svadba']} />
     <div id={SECTION_ID.HOME} />
     <Hero
-      continueTo={routes.PROGRAM}
+      continueToId={SECTION_ID.PROGRAM}
       backgroundImage={
         <BackgroundImage
           render={data => (
@@ -60,12 +60,6 @@ const IndexPage = () => (
         <div>Cas: Aktivita: Miesto</div>
         <div>Cas: Aktivita: Miesto</div>
       </Text.S>
-    </Section>
-    <Section id={SECTION_ID.VENUE} title="Melodia">
-      <Text.S>nieco o melodii</Text.S>
-    </Section>
-    <Section id={SECTION_ID.CHURCH} title="Kostol" hasDarkBackground>
-      <Text.S>nieco o kostole</Text.S>
     </Section>
     <Section id={SECTION_ID.ACCOMMODATION} title="Ubytovanie">
       <Text.S>nieco o ubytovanie</Text.S>
