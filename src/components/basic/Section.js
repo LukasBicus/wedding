@@ -2,8 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { space } from 'styled-system'
-import { H2 } from './Typography'
 import theme from '../../theme'
+import Title from '../custom/Title'
 
 const Wrapper = styled.div`
   background: ${({ hasDarkBackground }) =>
@@ -17,19 +17,10 @@ const Wrapper = styled.div`
   `}
   ${space}
 `
-const StyledTitle = styled(H2)`
-  color: ${theme.colors.TURKISH_ROSE};
-  ${theme.media.mobile`
-    padding-bottom: 12px;
-  `};
-  ${theme.media.desktop`
-    padding: 24px 0;
-  `}
-`
 
 const Section = ({ id, title, children, hasDarkBackground, ...props }) => (
   <Wrapper id={id} hasDarkBackground={hasDarkBackground} {...props}>
-    {title && <StyledTitle>{title}</StyledTitle>}
+    {title && <Title>{title}</Title>}
     <div>{children}</div>
   </Wrapper>
 )
