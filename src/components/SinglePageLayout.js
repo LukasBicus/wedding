@@ -7,6 +7,7 @@ import ExternalLink from './basic/ExternalLink'
 import theme from '../theme'
 
 const StyledFooter = styled.footer`
+  flex: 0 0 auto;
   display: flex;
   padding: 1rem 0;
   width: 100%;
@@ -26,20 +27,15 @@ const Wrapper = styled.div`
 `
 
 const Main = styled.main`
-  overflow-y: auto;
+  overflow-y: hidden;
   width: 100%;
-  flex-grow: 1;
-  flex-direction: column;
-  display: flex;
-`
-const ChildrenWrapper = styled.div`
   flex-grow: 1;
 `
 
-const Layout = ({ children }) => (
+const SinglePageLayout = ({ children }) => (
   <StaticQuery
     query={graphql`
-      query LayoutQuery {
+      query SinglePageLayoutQuery {
         site {
           siteMetadata {
             title
@@ -50,19 +46,17 @@ const Layout = ({ children }) => (
     render={data => (
       <Wrapper>
         <Header siteTitle={data.site.siteMetadata.title} />
-        <Main>
-          <ChildrenWrapper>{children}</ChildrenWrapper>
-          <StyledFooter>
-            <ExternalLink to="https://github.com/LukasBicus">2019, Lukáš Bičuš</ExternalLink>
-          </StyledFooter>
-        </Main>
+        <Main>{children}</Main>
+        <StyledFooter>
+          <ExternalLink to="https://github.com/LukasBicus">2019, Lukáš Bičuš</ExternalLink>
+        </StyledFooter>
       </Wrapper>
     )}
   />
 )
 
-Layout.propTypes = {
+SinglePageLayout.propTypes = {
   children: PropTypes.node.isRequired
 }
 
-export default Layout
+export default SinglePageLayout

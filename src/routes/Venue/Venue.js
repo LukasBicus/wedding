@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import Layout from '../../components/Layout'
+import SinglePageLayout from '../../components/SinglePageLayout'
 import Seo from '../../components/Seo'
 import Title from '../../components/custom/Title'
 
@@ -9,7 +9,7 @@ const Box = styled.div`
 `
 
 const Venue = () => (
-  <Layout>
+  <SinglePageLayout>
     <Seo title="Sxxx" keywords={['lukas bicus', 'janka kolesarova', 'svadba', 'sxxx']} />
     <Box>
       <Title>Sxxx</Title>
@@ -54,7 +54,7 @@ const Venue = () => (
       <div>janka</div>
       <div>janka</div>
     </Box>
-  </Layout>
+  </SinglePageLayout>
 )
 
 Venue.propTypes = {}
