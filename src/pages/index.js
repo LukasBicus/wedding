@@ -2,8 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 import Img from 'gatsby-image'
 
-import Layout from '../components/layout'
-import SEO from '../components/seo'
+import Layout from '../components/Layout'
+import Seo from '../components/Seo'
 import { SECTION_ID } from '../constants'
 import Hero from '../components/basic/Hero'
 import Section from '../components/basic/Section'
@@ -29,7 +29,7 @@ const BottomH3 = styled(StyledH3)`
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" keywords={['lukas bicus', 'janka kolesarova', 'svadba']} />
+    <Seo title="Home" keywords={['lukas bicus', 'janka kolesarova', 'svadba']} />
     <div id={SECTION_ID.HOME} />
     <Hero
       continueToId={SECTION_ID.PROGRAM}

@@ -1,15 +1,59 @@
 import React from 'react'
-import Layout from '../../components/layout'
-import SEO from '../../components/seo'
+import styled from 'styled-components'
+import Layout from '../../components/Layout'
+import Seo from '../../components/Seo'
 import Title from '../../components/custom/Title'
-import SinglePageSection from '../../components/basic/SinglePageSection'
+
+const Box = styled.div`
+  height: 100%;
+`
 
 const Venue = () => (
   <Layout>
-    <SEO title="Sxxx" keywords={['lukas bicus', 'janka kolesarova', 'svadba', 'sxxx']}/>
-    <SinglePageSection>
+    <Seo title="Sxxx" keywords={['lukas bicus', 'janka kolesarova', 'svadba', 'sxxx']} />
+    <Box>
       <Title>Sxxx</Title>
-    </SinglePageSection>
+      <div>janka</div>
+      <div>janka</div>
+      <div>janka</div>
+      <div>janka</div>
+      <div>janka</div>
+      <div>janka</div>
+      <div>janka</div>
+      <div>janka</div>
+      <div>janka</div>
+      <div>janka</div>
+      <div>janka</div>
+      <div>janka</div>
+      <div>janka</div>
+      <div>janka</div>
+      <div>janka</div>
+      <div>janka</div>
+      <div>janka</div>
+      <div>janka</div>
+      <div>janka</div>
+      <div>janka</div>
+      <div>janka</div>
+      <div>janka</div>
+      <div>janka</div>
+      <div>janka</div>
+      <div>janka</div>
+      <div>janka</div>
+      <div>janka</div>
+      <div>janka</div>
+      <div>janka</div>
+      <div>janka</div>
+      <div>janka</div>
+      <div>janka</div>
+      <div>janka</div>
+      <div>janka</div>
+      <div>janka</div>
+      <div>janka</div>
+      <div>janka</div>
+      <div>janka</div>
+      <div>janka</div>
+      <div>janka</div>
+    </Box>
   </Layout>
 )
 

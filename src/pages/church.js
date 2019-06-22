@@ -1,10 +1,10 @@
 import React from 'react'
-import SEO from '../components/seo'
-import Layout from '../components/layout'
+import Seo from '../components/Seo'
+import Layout from '../components/Layout'
 
 const Church = () => (
   <Layout>
-    <SEO title="Sxxx" keywords={['lukas bicus', 'janka kolesarova', 'svadba', 'sxxx']} />
+    <Seo title="Sxxx" keywords={['lukas bicus', 'janka kolesarova', 'svadba', 'sxxx']} />
     Kostol
   </Layout>
 )
