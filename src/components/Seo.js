@@ -10,30 +10,39 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { useStaticQuery, graphql } from 'gatsby'
 
-function Seo({ description, lang, meta, keywords, title }) {
-  const { site } = useStaticQuery(
+function Seo({ description, lang, meta, title }) {
+  const {
+    allMarkdownRemark: { edges: [{ node: { frontmatter: { aboutSite, seoKeywords } } }] }
+  } = useStaticQuery(
     graphql`
       query {
-        site {
-          siteMetadata {
-            title
-            description
-            author
+        allMarkdownRemark {
+          edges {
+            node {
+              frontmatter {
+                aboutSite {
+                  author
+                  year
+                  linkToAuthor
+                  title
+                  description
+                }
+                seoKeywords
+              }
+            }
           }
         }
       }
     `
   )
-
-  const metaDescription = description || site.siteMetadata.description
-
+  const metaDescription = description || aboutSite.description
   return (
     <Helmet
       htmlAttributes={{
         lang
       }}
       title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
+      titleTemplate={`%s | ${aboutSite.title}`}
       meta={[
         {
           name: 'description',
@@ -57,7 +66,7 @@ function Seo({ description, lang, meta, keywords, title }) {
         },
         {
           name: 'twitter:creator',
-          content: site.siteMetadata.author
+          content: aboutSite.author
         },
         {
           name: 'twitter:title',
@@ -69,10 +78,10 @@ function Seo({ description, lang, meta, keywords, title }) {
         }
       ]
         .concat(
-          keywords.length > 0
+          seoKeywords.length > 0
             ? {
               name: 'keywords',
-              content: keywords.join(', ')
+              content: seoKeywords.join(', ')
             }
             : []
         )
@@ -84,7 +93,7 @@ function Seo({ description, lang, meta, keywords, title }) {
 }
 
 Seo.defaultProps = {
-  lang: 'en',
+  lang: 'sk',
   meta: [],
   keywords: [],
   description: ''

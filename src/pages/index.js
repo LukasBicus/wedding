@@ -1,9 +1,10 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import Img from 'gatsby-image'
+import { graphql } from 'gatsby'
 
 import Layout from '../components/Layout'
-import Seo from '../components/Seo'
 import { SECTION_ID } from '../constants'
 import Hero from '../components/basic/Hero'
 import Section from '../components/basic/Section'
@@ -27,10 +28,28 @@ const BottomH3 = styled(StyledH3)`
   padding-bottom: 15rem;
 `
 
-const IndexPage = () => (
-  <Layout>
-    <Seo title="Home" keywords={['lukas bicus', 'janka kolesarova', 'svadba']} />
-    <div id={SECTION_ID.HOME} />
+const IndexPage = ({
+  data: {
+    allMarkdownRemark: {
+      edges: [{
+        node: {
+          frontmatter: {
+            index: {
+              seoTitle,
+              brideName,
+              groomName,
+              date,
+              place,
+              sections
+            }
+          }
+        }
+      }]
+    }
+  }
+}) => (
+  <Layout seoTitle={seoTitle}>
+    <div id={SECTION_ID.HOME}/>
     <Hero
       continueToId={SECTION_ID.PROGRAM}
       backgroundImage={
@@ -47,13 +66,13 @@ const IndexPage = () => (
         />
       }
     >
-      <StyledH1>Janka Kolesárová</StyledH1>
+      <StyledH1>{brideName}</StyledH1>
       <StyledH1> & </StyledH1>
-      <StyledH1>Lukáš Bičuš</StyledH1>
-      <StyledH3>22.2.2020</StyledH3>
-      <BottomH3>Krompachy</BottomH3>
+      <StyledH1>{groomName}</StyledH1>
+      <StyledH3>{date}</StyledH3>
+      <BottomH3>{place}</BottomH3>
     </Hero>
-    <Section id={SECTION_ID.PROGRAM} title="Program" hasDarkBackground>
+    <Section id={SECTION_ID.PROGRAM} title={sections.program} hasDarkBackground>
       <Text.S>
         <div>Cas: Aktivita: Miesto</div>
         <div>Cas: Aktivita: Miesto</div>
@@ -61,16 +80,46 @@ const IndexPage = () => (
         <div>Cas: Aktivita: Miesto</div>
       </Text.S>
     </Section>
-    <Section id={SECTION_ID.ACCOMMODATION} title="Ubytovanie">
+    <Section id={SECTION_ID.ACCOMMODATION} title={sections.accommodation}>
       <Text.S>nieco o ubytovanie</Text.S>
     </Section>
-    <Section id={SECTION_ID.TRANSPORT} title="Doprava" hasDarkBackground>
+    <Section id={SECTION_ID.TRANSPORT} title={sections.transport} hasDarkBackground>
       <Text.S>nieco o doprave</Text.S>
     </Section>
-    <Section id={SECTION_ID.SEATING_PLAN} title="Zasadaci poriadok">
+    <Section id={SECTION_ID.SEATING_PLAN} title={sections.seatingPlan}>
       <Text.S>nieco o zasadacom poriadku</Text.S>
     </Section>
   </Layout>
 )
+
+export const query = graphql`
+  query {
+    allMarkdownRemark {
+      edges {
+        node {
+          frontmatter {
+            index {
+              seoTitle
+              brideName
+              groomName
+              date
+              place
+              sections {
+                program
+                accommodation
+                transport
+                seatingPlan
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+`
+
+IndexPage.propTypes = {
+  data: PropTypes.object
+}
 
 export default IndexPage

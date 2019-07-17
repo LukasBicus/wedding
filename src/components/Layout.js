@@ -1,21 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { StaticQuery, graphql } from 'gatsby'
 import styled from 'styled-components'
 import Header from './custom/Header'
-import ExternalLink from './basic/ExternalLink'
-import theme from '../theme'
-
-const StyledFooter = styled.footer`
-  display: flex;
-  padding: 1rem 0;
-  width: 100%;
-  justify-content: center;
-  text-align: center;
-  ${theme.media.mobile`
-    flex-direction: column;
-  `};
-`
+import Seo from './Seo'
+import Footer from './custom/Footer'
 
 const Wrapper = styled.div`
   height: 100vh;
@@ -36,33 +24,20 @@ const ChildrenWrapper = styled.div`
   flex-grow: 1;
 `
 
-const Layout = ({ children }) => (
-  <StaticQuery
-    query={graphql`
-      query LayoutQuery {
-        site {
-          siteMetadata {
-            title
-          }
-        }
-      }
-    `}
-    render={data => (
-      <Wrapper>
-        <Header siteTitle={data.site.siteMetadata.title} />
-        <Main>
-          <ChildrenWrapper>{children}</ChildrenWrapper>
-          <StyledFooter>
-            <ExternalLink to="https://github.com/LukasBicus">2019, Lukáš Bičuš</ExternalLink>
-          </StyledFooter>
-        </Main>
-      </Wrapper>
-    )}
-  />
+const Layout = ({ seoTitle, children }) => (
+  <Wrapper>
+    <Seo title={seoTitle}/>
+    <Header />
+    <Main>
+      <ChildrenWrapper>{children}</ChildrenWrapper>
+      <Footer />
+    </Main>
+  </Wrapper>
 )
 
 Layout.propTypes = {
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
+  seoTitle: PropTypes.string.isRequired
 }
 
 export default Layout
