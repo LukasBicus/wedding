@@ -12,7 +12,15 @@ import { useStaticQuery, graphql } from 'gatsby'
 
 function Seo({ description, lang, meta, title }) {
   const {
-    allMarkdownRemark: { edges: [{ node: { frontmatter: { aboutSite, seoKeywords } } }] }
+    allMarkdownRemark: {
+      edges: [
+        {
+          node: {
+            frontmatter: { aboutSite, seoKeywords }
+          }
+        }
+      ]
+    }
   } = useStaticQuery(
     graphql`
       query {

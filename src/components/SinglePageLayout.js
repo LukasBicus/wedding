@@ -21,10 +21,10 @@ const Main = styled.main`
 
 const SinglePageLayout = ({ seoTitle, children }) => (
   <Wrapper>
-    <Seo title={seoTitle}/>
-    <Header/>
+    <Seo title={seoTitle} />
+    <Header />
     <Main>{children}</Main>
-    <Footer/>
+    <Footer />
   </Wrapper>
 )
 

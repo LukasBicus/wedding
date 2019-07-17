@@ -31,25 +31,20 @@ const BottomH3 = styled(StyledH3)`
 const IndexPage = ({
   data: {
     allMarkdownRemark: {
-      edges: [{
-        node: {
-          frontmatter: {
-            index: {
-              seoTitle,
-              brideName,
-              groomName,
-              date,
-              place,
-              sections
+      edges: [
+        {
+          node: {
+            frontmatter: {
+              index: { seoTitle, brideName, groomName, date, place, sections }
             }
           }
         }
-      }]
+      ]
     }
   }
 }) => (
   <Layout seoTitle={seoTitle}>
-    <div id={SECTION_ID.HOME}/>
+    <div id={SECTION_ID.HOME} />
     <Hero
       continueToId={SECTION_ID.PROGRAM}
       backgroundImage={

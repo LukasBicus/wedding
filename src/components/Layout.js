@@ -26,7 +26,7 @@ const ChildrenWrapper = styled.div`
 
 const Layout = ({ seoTitle, children }) => (
   <Wrapper>
-    <Seo title={seoTitle}/>
+    <Seo title={seoTitle} />
     <Header />
     <Main>
       <ChildrenWrapper>{children}</ChildrenWrapper>

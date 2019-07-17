@@ -16,7 +16,7 @@ const StyledFooter = styled.footer`
   `};
 `
 
-const Footer = () =>
+const Footer = () => (
   <StaticQuery
     query={graphql`
       query {
@@ -37,17 +37,15 @@ const Footer = () =>
     `}
     render={({
       allMarkdownRemark: {
-        edges: [{
-          node: {
-            frontmatter: {
-              aboutSite: {
-                author,
-                year,
-                linkToAuthor
+        edges: [
+          {
+            node: {
+              frontmatter: {
+                aboutSite: { author, year, linkToAuthor }
               }
             }
           }
-        }]
+        ]
       }
     }) => (
       <StyledFooter>
@@ -55,5 +53,6 @@ const Footer = () =>
       </StyledFooter>
     )}
   />
+)
 
 export default Footer
