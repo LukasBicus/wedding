@@ -4,7 +4,7 @@ import NavBar from '../basic/NavBar'
 import NavLink from './NavLink'
 import { routes } from '../../constants'
 
-const Header = () =>
+const Header = () => (
   <StaticQuery
     query={graphql`
       query {
@@ -29,21 +29,15 @@ const Header = () =>
     `}
     render={({
       allMarkdownRemark: {
-        edges: [{
-          node: {
-            frontmatter: {
-              header: {
-                home,
-                program,
-                venue,
-                church,
-                accommodation,
-                transport,
-                seatingPlan
+        edges: [
+          {
+            node: {
+              frontmatter: {
+                header: { home, program, venue, church, accommodation, transport, seatingPlan }
               }
             }
           }
-        }]
+        ]
       }
     }) => (
       <NavBar>
@@ -55,9 +49,9 @@ const Header = () =>
         <NavLink toLink={routes.TRANSPORT}>{transport}</NavLink>
         <NavLink toLink={routes.SEATING_PLAN}>{seatingPlan}</NavLink>
       </NavBar>
-    )
-    }
+    )}
   />
+)
 
 Header.propTypes = {}
 
