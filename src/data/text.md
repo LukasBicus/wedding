@@ -1,9 +1,8 @@
 ---
-seoKeywords: [
-        'Janka Kolesárová',
-        'Lukáš Bičuš',
-        'svadba'
-    ]
+seoKeywords:
+  - Janka Kolesárová
+  - Lukáš Bičuš
+  - svadba
 aboutSite:
   author: 'Lukáš Bičuš'
   year: '2019'
@@ -21,4 +20,12 @@ index:
         accommodation: 'Ubytovanie'
         transport: 'Doprava'
         seatingPlan: 'Zasadací poriadok'
+header:
+    home: Domov 
+    program: Program 
+    venue: Melodia 
+    church: Kostol 
+    accommodation: Ubytovanie 
+    transport: Doprava 
+    seatingPlan: Zasadaci poriadok 
 ---
