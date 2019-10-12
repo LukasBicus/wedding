@@ -5,7 +5,7 @@ import { space } from 'styled-system'
 import theme from '../../theme'
 import Title from '../custom/Title'
 
-const { SMALL } = theme.space
+const { SMALL, BIG } = theme.space
 
 const Wrapper = styled.div`
   background: ${({ hasDarkBackground }) =>
@@ -16,6 +16,7 @@ const Wrapper = styled.div`
   `};
   ${theme.media.desktop`
     text-align: center;
+    padding-bottom: ${BIG};
   `}
   ${space}
 `
