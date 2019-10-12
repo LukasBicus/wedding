@@ -81,9 +81,6 @@ const IndexPage = ({
     <Section id={SECTION_ID.TRANSPORT} title={sections.transport} hasDarkBackground>
       <Text.S>nieco o doprave</Text.S>
     </Section>
-    <Section id={SECTION_ID.SEATING_PLAN} title={sections.seatingPlan}>
-      <Text.S>nieco o zasadacom poriadku</Text.S>
-    </Section>
   </Layout>
 )
 
@@ -103,7 +100,6 @@ export const query = graphql`
                 program
                 accommodation
                 transport
-                seatingPlan
               }
             }
           }

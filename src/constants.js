@@ -6,8 +6,7 @@ export const SECTION_ID = {
   VENUE: 'venue',
   CHURCH: 'church',
   ACCOMMODATION: 'accommodation',
-  TRANSPORT: 'transport',
-  SEATING_PLAN: 'seating-plan'
+  TRANSPORT: 'transport'
 }
 
 export const routes = {
@@ -16,6 +15,5 @@ export const routes = {
   VENUE: `/${SECTION_ID.VENUE}`,
   CHURCH: `/${SECTION_ID.CHURCH}`,
   ACCOMMODATION: `/#${SECTION_ID.ACCOMMODATION}`,
-  TRANSPORT: `/#${SECTION_ID.TRANSPORT}`,
-  SEATING_PLAN: `/#${SECTION_ID.SEATING_PLAN}`
+  TRANSPORT: `/#${SECTION_ID.TRANSPORT}`
 }
