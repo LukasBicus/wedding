@@ -19,6 +19,7 @@ const Wrapper = styled.div`
   justify-content: space-between;
   ${theme.media.mobile`
     position: relative;
+    flex-direction: row-reverse;
   `};
 `
 
