@@ -1,11 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
 import { graphql, StaticQuery } from 'gatsby'
-import SinglePageLayout from '../../components/SinglePageLayout'
-import Title from '../../components/custom/Title'
-import Measure from '../../components/basic/Measure'
-import theme from '../../theme'
-import Description from '../../components/custom/Description'
+import SinglePageLayout from '../components/SinglePageLayout'
+import Title from '../components/custom/Title'
+import Measure from '../components/basic/Measure'
+import theme from '../theme'
+import Description from '../components/custom/Description'
 
 const Box = styled.div`
   height: 100%;
