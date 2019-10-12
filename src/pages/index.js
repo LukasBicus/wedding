@@ -69,14 +69,16 @@ const IndexPage = ({
     </Hero>
     <Section id={SECTION_ID.PROGRAM} title={sections.program}>
       <Text.S>
-        <div>Cas: Aktivita: Miesto</div>
-        <div>Cas: Aktivita: Miesto</div>
-        <div>Cas: Aktivita: Miesto</div>
-        <div>Cas: Aktivita: Miesto</div>
+        <div>14:15 - odpytávanie</div>
+        <div>15:00 - svadobný obrad</div>
+        <div>okolo 16:30 - svadobná hostina</div>
       </Text.S>
     </Section>
     <Section id={SECTION_ID.TRANSPORT} title={sections.transport} hasDarkBackground>
-      <Text.S>nieco o doprave</Text.S>
+      <Text.S>
+        <p>Zabezpečíme doprava autobusom zo Starej Ľubovne do Krompach.</p>
+        <p>Čas i miesto nastupu upresníme a uverejníme (aj) tu.</p>
+      </Text.S>
     </Section>
   </Layout>
 )
