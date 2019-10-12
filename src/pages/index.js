@@ -76,8 +76,8 @@ const IndexPage = ({
     </Section>
     <Section id={SECTION_ID.TRANSPORT} title={sections.transport} hasDarkBackground>
       <Text.S>
-        <p>Zabezpečíme doprava autobusom zo Starej Ľubovne do Krompach.</p>
-        <p>Čas i miesto nastupu upresníme a uverejníme (aj) tu.</p>
+        Zabezpečíme doprava autobusom zo Starej Ľubovne do Krompach. Čas i miesto nastupu upresníme
+        a uverejníme (aj) tu.
       </Text.S>
     </Section>
   </Layout>
