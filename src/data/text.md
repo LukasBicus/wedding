@@ -17,14 +17,12 @@ index:
     place: 'Krompachy'
     sections:
         program: 'Program'
-        accommodation: 'Ubytovanie'
         transport: 'Doprava'
 header:
     home: Domov 
     program: Program 
     venue: Svadobná sála 
     church: Kostol 
-    accommodation: Ubytovanie 
     transport: Doprava
 venue:
   address: Námestie slobody 2, 043 42 Krompachy

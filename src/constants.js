@@ -5,7 +5,6 @@ export const SECTION_ID = {
   PROGRAM: 'program',
   VENUE: 'venue',
   CHURCH: 'church',
-  ACCOMMODATION: 'accommodation',
   TRANSPORT: 'transport'
 }
 
@@ -14,6 +13,5 @@ export const routes = {
   PROGRAM: `/#${SECTION_ID.PROGRAM}`,
   VENUE: `/${SECTION_ID.VENUE}`,
   CHURCH: `/${SECTION_ID.CHURCH}`,
-  ACCOMMODATION: `/#${SECTION_ID.ACCOMMODATION}`,
   TRANSPORT: `/#${SECTION_ID.TRANSPORT}`
 }

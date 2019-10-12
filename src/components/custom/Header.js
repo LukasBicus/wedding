@@ -17,7 +17,6 @@ const Header = () => (
                   program
                   venue
                   church
-                  accommodation
                   transport
                 }
               }
@@ -32,7 +31,7 @@ const Header = () => (
           {
             node: {
               frontmatter: {
-                header: { home, program, venue, church, accommodation, transport }
+                header: { home, program, venue, church, transport }
               }
             }
           }
@@ -44,7 +43,6 @@ const Header = () => (
         <NavLink toLink={routes.PROGRAM}>{program}</NavLink>
         <NavLink toLink={routes.VENUE}>{venue}</NavLink>
         <NavLink toLink={routes.CHURCH}>{church}</NavLink>
-        <NavLink toLink={routes.ACCOMMODATION}>{accommodation}</NavLink>
         <NavLink toLink={routes.TRANSPORT}>{transport}</NavLink>
       </NavBar>
     )}

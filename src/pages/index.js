@@ -67,16 +67,13 @@ const IndexPage = ({
       <StyledH3>{date}</StyledH3>
       <BottomH3>{place}</BottomH3>
     </Hero>
-    <Section id={SECTION_ID.PROGRAM} title={sections.program} hasDarkBackground>
+    <Section id={SECTION_ID.PROGRAM} title={sections.program}>
       <Text.S>
         <div>Cas: Aktivita: Miesto</div>
         <div>Cas: Aktivita: Miesto</div>
         <div>Cas: Aktivita: Miesto</div>
         <div>Cas: Aktivita: Miesto</div>
       </Text.S>
-    </Section>
-    <Section id={SECTION_ID.ACCOMMODATION} title={sections.accommodation}>
-      <Text.S>nieco o ubytovanie</Text.S>
     </Section>
     <Section id={SECTION_ID.TRANSPORT} title={sections.transport} hasDarkBackground>
       <Text.S>nieco o doprave</Text.S>
@@ -98,7 +95,6 @@ export const query = graphql`
               place
               sections {
                 program
-                accommodation
                 transport
               }
             }
