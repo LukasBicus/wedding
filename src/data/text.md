@@ -10,7 +10,7 @@ aboutSite:
   title: 'Janka a Lukáš' 
   description: 'Ľúbime sa, berieme sa'
 index:
-    seoTitle: 'Janka a Lukáš'
+    seoTitle: 'Svadba'
     brideName: 'Janka Kolesárová'
     groomName: 'Lukáš Bičuš'
     date: '22.2.2020'
