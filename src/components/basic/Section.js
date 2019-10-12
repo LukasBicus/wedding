@@ -5,12 +5,14 @@ import { space } from 'styled-system'
 import theme from '../../theme'
 import Title from '../custom/Title'
 
+const { SMALL } = theme.space
+
 const Wrapper = styled.div`
   background: ${({ hasDarkBackground }) =>
     hasDarkBackground ? theme.colors.BRIDESMAID : theme.colors.WHITE};
   position: relative;
   ${theme.media.mobile`
-    padding: 12px
+    padding: 0 ${SMALL} ${SMALL} ${SMALL};
   `};
   ${theme.media.desktop`
     text-align: center;

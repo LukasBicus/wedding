@@ -2,10 +2,12 @@ import React from 'react'
 import styled from 'styled-components'
 import { graphql, StaticQuery } from 'gatsby'
 import SinglePageLayout from '../components/SinglePageLayout'
-import Title from '../components/custom/Title'
+import { Text } from '../components/basic/Typography'
 import Measure from '../components/basic/Measure'
+import Title from '../components/custom/Title'
 import theme from '../theme'
-import Description from '../components/custom/Description'
+
+const { SMALL } = theme.space
 
 const Box = styled.div`
   height: 100%;
@@ -48,8 +50,8 @@ const Venue = () => (
     }) => (
       <SinglePageLayout seoTitle={venue}>
         <Box>
-          <Title>{header.venue}</Title>
-          <Description pb={theme.space.SMALL}>{venue.description}</Description>
+          <Title pl={SMALL}>{header.venue}</Title>
+          <Text.S p={`0 ${SMALL} ${SMALL} ${SMALL}`}>{venue.description}</Text.S>
           <Measure>
             {({ availableHeight, availableWidth }) => (
               <iframe
