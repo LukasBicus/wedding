@@ -6,10 +6,12 @@ const { SMALL, BIG } = theme.space
 
 const Description = styled(Text.S)`
   ${theme.media.mobile`
-    padding: 0 ${SMALL} ${SMALL} ${SMALL}; 
+    padding-left: ${SMALL};
+    padding-right: ${SMALL};
   `};
   ${theme.media.desktop`
-    padding: 0 ${BIG};
+    padding-left: ${BIG};
+    padding-right: ${BIG};
   `}
 `
 export default Description

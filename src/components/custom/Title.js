@@ -7,10 +7,10 @@ const { SMALL, BIG } = theme.space
 const Title = styled(H2)`
   color: ${theme.colors.TURKISH_ROSE};
   ${theme.media.mobile`
-    padding: ${SMALL} 0 ${SMALL} ${SMALL};
+    padding: ${SMALL};
   `};
   ${theme.media.desktop`
-    padding: ${BIG} 0 ${BIG} ${BIG};
+    padding: ${BIG};
   `}
 `
 export default Title
