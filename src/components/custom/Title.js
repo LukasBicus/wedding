@@ -2,13 +2,15 @@ import styled from 'styled-components'
 import { H2 } from '../basic/Typography'
 import theme from '../../theme'
 
+const { SMALL, BIG } = theme.space
+
 const Title = styled(H2)`
   color: ${theme.colors.TURKISH_ROSE};
   ${theme.media.mobile`
-    padding-bottom: 12px;
+    padding: ${SMALL} 0 ${SMALL} ${SMALL};
   `};
   ${theme.media.desktop`
-    padding: 24px 0;
+    padding: ${BIG} 0 ${BIG} ${BIG};
   `}
 `
 export default Title

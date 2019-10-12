@@ -23,6 +23,11 @@ export default {
     M: 18,
     S: 15
   },
+  space: {
+    SMALL: '12px',
+    NORMAL: '16px',
+    BIG: '24px'
+  },
   media: {
     mobile: (...args) =>
       css`
