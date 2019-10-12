@@ -8,9 +8,9 @@ aboutSite:
   year: '2019'
   linkToAuthor: https://github.com/LukasBicus
   title: 'Janka a Lukáš' 
-  description: 'Rozhodli sme sa vykročiť na spoločnú cestu životom'
+  description: 'Ľúbime sa, berieme sa'
 index:
-    seoTitle: 'Domov'
+    seoTitle: 'Janka a Lukáš'
     brideName: 'Janka Kolesárová'
     groomName: 'Lukáš Bičuš'
     date: '22.2.2020'
