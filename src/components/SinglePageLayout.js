@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import Header from './custom/Header'
 import Seo from './Seo'
 import Footer from './custom/Footer'
+import GlobalStyle from './GlobalStyles'
 
 const Wrapper = styled.div`
   height: 100vh;
@@ -22,6 +23,7 @@ const Main = styled.main`
 const SinglePageLayout = ({ seoTitle, children }) => (
   <Wrapper>
     <Seo title={seoTitle} />
+    <GlobalStyle />
     <Header />
     <Main>{children}</Main>
     <Footer />

@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import Header from './custom/Header'
 import Seo from './Seo'
 import Footer from './custom/Footer'
-import papyrus from '../images/papyrus.png'
+import GlobalStyle from './GlobalStyles'
 
 const Wrapper = styled.div`
   height: 100vh;
@@ -12,7 +12,6 @@ const Wrapper = styled.div`
   flex-direction: column;
   width: 100%;
   position: relative;
-  background: url(${papyrus}) repeat;
 `
 
 const Main = styled.main`
@@ -29,6 +28,7 @@ const ChildrenWrapper = styled.div`
 const Layout = ({ seoTitle, children }) => (
   <Wrapper>
     <Seo title={seoTitle} />
+    <GlobalStyle />
     <Header />
     <Main>
       <ChildrenWrapper>{children}</ChildrenWrapper>
