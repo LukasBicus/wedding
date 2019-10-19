@@ -21,10 +21,12 @@ const ContentWrapper = styled.div`
   align-items: center;
   text-align: center;
 `
-const globalWindow = typeof window !== 'undefined' ? window : {
-  outerHeight: 0,
-  innerHeight: 0
-}
+const globalWindow = typeof window !== 'undefined'
+  ? window
+  : {
+    outerHeight: 0,
+    innerHeight: 0
+  }
 const StyledLink = styled.a`
   color: ${theme.colors.WHITE};
   cursor: pointer;

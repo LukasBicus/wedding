@@ -15,10 +15,12 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        background_color: '#232959',
+        theme_color: '#232959',
+        name: `Svadba Janka a Lukáš`,
+        short_name: `Svadba JL`,
         start_url: `/`,
-        display: `minimal-ui`,
+        display: `standalone`,
         icon: path.join(__dirname, 'src/images/postavicky-v-srdci-ico.svg')
       }
     },

@@ -4,7 +4,6 @@ export const MOBILE_THRESHOLD = 736
 
 export default {
   colors: {
-    TURKISH_ROSE: '#b06e8a',
     CLOUD_BURST: '#232959',
     SEMI_CLOUD_BURST: '#23295926',
     WHITE: '#FFFFFF'
