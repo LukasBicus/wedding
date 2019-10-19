@@ -9,7 +9,7 @@ const { SMALL, BIG } = theme.space
 
 const Wrapper = styled.div`
   background: ${({ hasDarkBackground }) =>
-    hasDarkBackground ? theme.colors.BRIDESMAID : theme.colors.WHITE};
+    hasDarkBackground ? theme.colors.BRIDESMAID : 'transparent'};
   position: relative;
   ${theme.media.mobile`
     padding: 0 ${SMALL} ${SMALL} ${SMALL};
