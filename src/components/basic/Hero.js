@@ -12,26 +12,22 @@ const Wrapper = styled.div`
 `
 
 const ContentWrapper = styled.div`
-  width: 100%;
   height: 100%;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   text-align: center;
-  position: relative;
 `
 
 const StyledLink = styled.a`
   color: ${theme.colors.WHITE};
   cursor: pointer;
-  position: absolute;
-  bottom: 30px;
 `
 
-const Hero = ({ children, backgroundImage, continueToId }) => (
+const Hero = ({ children, continueToId }) => (
   <Wrapper>
-    {backgroundImage}
     <ContentWrapper>
       {children}
       <StyledLink
