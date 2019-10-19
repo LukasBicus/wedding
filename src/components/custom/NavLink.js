@@ -15,7 +15,7 @@ const StyledLink = styled(NavBar.Link)`
 
 const StyledText = styled(Text.M)`
   ${theme.media.mobile`
-    color: ${theme.colors.TURKISH_ROSE};
+    color: ${theme.colors.CLOUD_BURST};
   `};
   ${theme.media.desktop`
     color: ${theme.colors.WHITE};

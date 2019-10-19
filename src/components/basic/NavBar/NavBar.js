@@ -14,7 +14,7 @@ const Wrapper = styled.div`
   display: flex;
   align-items: center;
   flex-direction: row;
-  background-color: ${theme.colors.TURKISH_ROSE};
+  background-color: ${theme.colors.CLOUD_BURST};
   box-shadow: ${theme.shadow.BOTTOM};
   justify-content: space-between;
   ${theme.media.mobile`

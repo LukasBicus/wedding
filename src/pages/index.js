@@ -16,15 +16,15 @@ const StyledImg = styled.img`
   width: 40%;
   transform: translate(-50%, -50%);
   top: 50%;
-  left: 50%; 
+  left: 50%;
   position: absolute;
 `
 
 const StyledH1 = styled(H1)`
-  color: ${theme.colors.TURKISH_ROSE};
+  color: ${theme.colors.CLOUD_BURST};
 `
 const StyledH3 = styled(H3)`
-  color: ${theme.colors.TURKISH_ROSE};
+  color: ${theme.colors.CLOUD_BURST};
 `
 const BottomH3 = styled(StyledH3)`
   padding-bottom: 15rem;
@@ -49,9 +49,7 @@ const IndexPage = ({
     <div id={SECTION_ID.HOME} />
     <Hero
       continueToId={SECTION_ID.PROGRAM}
-      backgroundImage={
-        <StyledImg src={fianceInHeart} alt="Snubenci v srdci" />
-      }
+      backgroundImage={<StyledImg src={fianceInHeart} alt="Snubenci v srdci" />}
     >
       <StyledH1>{brideName}</StyledH1>
       <StyledH1> & </StyledH1>

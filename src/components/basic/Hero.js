@@ -39,7 +39,7 @@ const Hero = ({ children, backgroundImage, continueToId }) => (
           scrollToElement(continueToId)
         }}
       >
-        <FaChevronCircleDown size="3.5rem" />
+        <FaChevronCircleDown size="3.5rem" color={theme.colors.SEMI_CLOUD_BURST} />
       </StyledLink>
     </ContentWrapper>
   </Wrapper>

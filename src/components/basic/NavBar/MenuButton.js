@@ -6,8 +6,8 @@ import { GiHamburgerMenu } from 'react-icons/gi'
 import theme from '../../../theme'
 
 const MenuAnchor = styled.a`
-  background: ${({ isActive }) => (isActive ? theme.colors.WHITE : theme.colors.TURKISH_ROSE)};
-  color: ${({ isActive }) => (isActive ? theme.colors.TURKISH_ROSE : theme.colors.WHITE)};
+  background: ${({ isActive }) => (isActive ? theme.colors.WHITE : theme.colors.CLOUD_BURST)};
+  color: ${({ isActive }) => (isActive ? theme.colors.CLOUD_BURST : theme.colors.WHITE)};
   cursor: pointer;
   ${space};
   ${theme.media.desktop`

@@ -3,7 +3,7 @@ import { H2 } from '../basic/Typography'
 import theme from '../../theme'
 
 const Title = styled(H2)`
-  color: ${theme.colors.TURKISH_ROSE};
+  color: ${theme.colors.CLOUD_BURST};
   ${theme.media.mobile`
     padding-bottom: ${theme.space.SMALL};
     padding-top: ${theme.space.SMALL};
