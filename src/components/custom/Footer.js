@@ -2,18 +2,15 @@ import React from 'react'
 import styled from 'styled-components'
 import { graphql, StaticQuery } from 'gatsby'
 import ExternalLink from '../basic/ExternalLink'
-import theme from '../../theme'
 
 const StyledFooter = styled.footer`
-  flex: 0 0 auto;
   display: flex;
   padding: 1rem 0;
   width: 100%;
   justify-content: center;
   text-align: center;
-  ${theme.media.mobile`
-    flex-direction: column;
-  `};
+  flex-shrink: 0;
+  flex-grow: 0;
 `
 
 const Footer = () => (

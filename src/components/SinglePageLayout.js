@@ -10,8 +10,6 @@ import { NAVIGATION_HEIGHT } from '../constants'
 const Wrapper = styled.div`
   height: 100vh;
   padding-top: ${NAVIGATION_HEIGHT}px;
-  display: flex;
-  flex-direction: column;
   width: 100%;
   position: relative;
 `
@@ -19,7 +17,9 @@ const Wrapper = styled.div`
 const Main = styled.main`
   overflow-y: hidden;
   width: 100%;
-  flex-grow: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 `
 
 const SinglePageLayout = ({ seoTitle, children }) => (
@@ -27,8 +27,10 @@ const SinglePageLayout = ({ seoTitle, children }) => (
     <Seo title={seoTitle} />
     <GlobalStyle />
     <Header />
-    <Main>{children}</Main>
-    <Footer />
+    <Main>
+      {children}
+      <Footer />
+    </Main>
   </Wrapper>
 )
 
