@@ -11,7 +11,7 @@ const ExternalLink = ({ to, children, textComp: TextComp, ...props }) => (
 )
 
 ExternalLink.defaultProps = {
-  textComp: Text.S
+  textComp: Text.M
 }
 
 ExternalLink.propTypes = {

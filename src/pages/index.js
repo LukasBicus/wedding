@@ -54,17 +54,17 @@ const IndexPage = ({
       />
     </Hero>
     <Section id={SECTION_ID.PROGRAM} title={sections.program} hasDarkBackground>
-      <Text.S>
+      <Text.M>
         <div>{askTime} - odpytávanie</div>
         <div>{ceremonyTime} - svadobný obrad</div>
         <div>{feastTime} - svadobná hostina</div>
-      </Text.S>
+      </Text.M>
     </Section>
     <Section id={SECTION_ID.TRANSPORT} title={sections.transport}>
-      <Text.S>
+      <Text.M>
         Zabezpečíme dopravu autobusom zo Starej Ľubovne do Krompach. Čas i miesto nástupu upresníme
         a uverejníme (aj) tu.
-      </Text.S>
+      </Text.M>
     </Section>
   </Layout>
 )

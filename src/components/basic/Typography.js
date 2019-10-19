@@ -12,9 +12,9 @@ const defaultTextConfig = {
 const createText = ({ fontFamily, tagName, fontSizeDesktop, fontSizeMobile }) => styled(tagName)`
   display: inline-block;
   font-family: ${fontFamily};
-  font-size: ${fontSizeDesktop}px;
+  font-size: ${fontSizeDesktop}em;
   ${theme.media.mobile`
-    font-size: ${fontSizeMobile}px;
+    font-size: ${fontSizeMobile}em;
   `};
   font-weight: ${({ isBold }) => (isBold ? 400 : 200)};
   ${space}

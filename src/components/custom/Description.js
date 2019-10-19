@@ -4,7 +4,7 @@ import theme from '../../theme'
 
 const { SMALL, BIG } = theme.space
 
-const Description = styled(Text.S)`
+const Description = styled(Text.M)`
   ${theme.media.mobile`
     padding-left: ${SMALL};
     padding-right: ${SMALL};

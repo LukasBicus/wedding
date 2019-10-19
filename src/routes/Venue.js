@@ -51,7 +51,7 @@ const Venue = () => (
       <SinglePageLayout seoTitle={venue}>
         <Box>
           <Title pl={SMALL}>{header.venue}</Title>
-          <Text.S p={`0 ${SMALL} ${SMALL} ${SMALL}`}>{venue.description}</Text.S>
+          <Text.M p={`0 ${SMALL} ${SMALL} ${SMALL}`}>{venue.description}</Text.M>
           <Measure>
             {({ availableHeight, availableWidth }) => (
               <iframe

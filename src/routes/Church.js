@@ -51,7 +51,7 @@ const Church = () => (
       <SinglePageLayout seoTitle={church}>
         <Box>
           <Title pl={SMALL}>{header.church}</Title>
-          <Text.S p={`0 ${SMALL} ${SMALL} ${SMALL}`}>{church.description}</Text.S>
+          <Text.M p={`0 ${SMALL} ${SMALL} ${SMALL}`}>{church.description}</Text.M>
           <Measure>
             {({ availableHeight, availableWidth }) => (
               <iframe

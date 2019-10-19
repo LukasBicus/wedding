@@ -13,7 +13,7 @@ index:
     seoTitle: 'Svadba'
     brideName: 'Janka Kolesárová'
     groomName: 'Lukáš Bičuš'
-    date: '22.február 2020'
+    date: '22. február 2020'
     ceremonyTime: '15:00'
     feastTime: 'okolo 16:30'
     askTime: 'okolo 14:15'

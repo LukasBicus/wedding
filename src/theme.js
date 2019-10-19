@@ -16,11 +16,11 @@ export default {
     AMATIC_SC: 'Amatic SC, cursive'
   },
   fontSize: {
-    H1: 64,
-    H2: 36,
-    H3: 24,
-    M: 18,
-    S: 15
+    H1: 4.6,
+    H2: 2.6,
+    H3: 1.7,
+    M: 1.4,
+    S: 1
   },
   space: {
     SMALL: '12px',
