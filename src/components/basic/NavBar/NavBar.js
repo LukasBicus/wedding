@@ -7,10 +7,12 @@ import { NAVIGATION_HEIGHT } from '../../../constants'
 import NavLink from './NavLink'
 
 const Wrapper = styled.div`
+  position: absolute;
   width: 100%;
   height: ${NAVIGATION_HEIGHT}px;
   z-index: 1;
   top: 0;
+  flex-shrink: 0;
   display: flex;
   align-items: center;
   flex-direction: row;
@@ -18,7 +20,6 @@ const Wrapper = styled.div`
   box-shadow: ${theme.shadow.BOTTOM};
   justify-content: space-between;
   ${theme.media.mobile`
-    position: relative;
     flex-direction: row-reverse;
   `};
 `

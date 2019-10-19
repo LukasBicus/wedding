@@ -5,9 +5,11 @@ import Header from './custom/Header'
 import Seo from './Seo'
 import Footer from './custom/Footer'
 import GlobalStyle from './GlobalStyles'
+import { NAVIGATION_HEIGHT } from '../constants'
 
 const Wrapper = styled.div`
   height: 100vh;
+  padding-top: ${NAVIGATION_HEIGHT}px;
   display: flex;
   flex-direction: column;
   width: 100%;

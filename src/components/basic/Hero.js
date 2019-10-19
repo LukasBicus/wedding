@@ -8,7 +8,8 @@ import { scrollToElement } from '../../utils'
 
 const Wrapper = styled.div`
   position: relative;
-  height: calc(100vh - ${NAVIGATION_HEIGHT}px);
+  height: 100vh;
+  padding-top: ${NAVIGATION_HEIGHT}px;
 `
 
 const ContentWrapper = styled.div`
@@ -24,6 +25,12 @@ const ContentWrapper = styled.div`
 const StyledLink = styled.a`
   color: ${theme.colors.WHITE};
   cursor: pointer;
+  ${theme.media.mobile`
+    @supports (-webkit-overflow-scrolling: touch) {
+      /* CSS specific to iOS devices */ 
+      padding-bottom: ${(window.outerHeight - window.innerHeight) * 2 / 3}px;
+    }
+  `}
 `
 
 const Hero = ({ children, continueToId }) => (

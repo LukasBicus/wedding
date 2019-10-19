@@ -34,7 +34,7 @@ const MobileOnlyWrapper = styled.div`
 const HomeHeadingsMobile = ({ brideName, groomName, date, place, ceremonyTime }) => (
   <React.Fragment>
     <MobileOnlyWrapper>
-      <StyledH1 paddingTop="4rem">{brideName}</StyledH1>
+      <StyledH1 paddingTop="2rem">{brideName}</StyledH1>
       <StyledH1> & </StyledH1>
       <StyledH1>{groomName}</StyledH1>
     </MobileOnlyWrapper>

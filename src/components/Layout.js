@@ -8,8 +8,6 @@ import GlobalStyle from './GlobalStyles'
 
 const Wrapper = styled.div`
   height: 100vh;
-  display: flex;
-  flex-direction: column;
   width: 100%;
   position: relative;
 `
@@ -17,7 +15,6 @@ const Wrapper = styled.div`
 const Main = styled.main`
   overflow-y: auto;
   width: 100%;
-  flex-grow: 1;
   flex-direction: column;
   display: flex;
 `
