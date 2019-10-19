@@ -3,9 +3,10 @@ import { space } from 'styled-system'
 import theme from '../../theme'
 
 const defaultTextConfig = {
-  fontFamily: theme.fontFamily.RALEWAY,
+  fontFamily: theme.fontFamily.AMATIC_SC,
   tagName: 'span',
-  fontSize: theme.fontSize.M
+  fontSizeDesktop: theme.fontSize.M,
+  fontSizeMobile: theme.fontSize.M
 }
 
 const createText = ({ fontFamily, tagName, fontSizeDesktop, fontSizeMobile }) => styled(tagName)`
@@ -15,7 +16,7 @@ const createText = ({ fontFamily, tagName, fontSizeDesktop, fontSizeMobile }) =>
   ${theme.media.mobile`
     font-size: ${fontSizeMobile}px;
   `};
-  font-weight: ${({ isBold }) => (isBold ? 400 : 100)};
+  font-weight: ${({ isBold }) => (isBold ? 400 : 200)};
   ${space}
 `
 

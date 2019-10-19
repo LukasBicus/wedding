@@ -14,7 +14,7 @@ export default {
     BOTTOM: '0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12)'
   },
   fontFamily: {
-    RALEWAY: 'Raleway, sans-serif'
+    AMATIC_SC: 'Amatic SC, cursive'
   },
   fontSize: {
     H1: 64,

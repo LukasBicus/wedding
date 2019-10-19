@@ -95,7 +95,7 @@ function Seo({ description, lang, meta, title }) {
         )
         .concat(meta)}
     >
-      <link href="https://fonts.googleapis.com/css?family=Raleway:100,400" rel="stylesheet" />
+      <link href="https://fonts.googleapis.com/css?family=Amatic+SC&display=swap:200,400" rel="stylesheet" />
     </Helmet>
   )
 }
