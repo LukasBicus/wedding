@@ -62,7 +62,7 @@ const IndexPage = ({
     </Section>
     <Section id={SECTION_ID.TRANSPORT} title={sections.transport}>
       <Text.M>
-        Zabezpečíme dopravu autobusom zo Starej Ľubovne do Krompach. Čas i miesto nástupu upresníme
+        Zabezpečíme dopravu autobusom zo Starej Ľubovne do Krompách. Čas i miesto nástupu upresníme
         a uverejníme (aj) tu.
       </Text.M>
     </Section>
