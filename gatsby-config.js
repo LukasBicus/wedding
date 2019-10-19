@@ -20,6 +20,7 @@ module.exports = {
         name: `Svadba Janka a Lukáš`,
         short_name: `Svadba JL`,
         start_url: `/`,
+        scope: '/',
         display: `standalone`,
         icon: path.join(__dirname, 'src/images/postavicky-v-srdci-ico.svg')
       }
