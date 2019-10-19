@@ -8,6 +8,7 @@ import Hero from '../components/basic/Hero'
 import Section from '../components/basic/Section'
 import { Text } from '../components/basic/Typography'
 import HomeHeadingsMobile from '../components/custom/HomeHeadingsMobile'
+import HomeHeadingsDesktop from '../components/custom/HomeHeadingsDesktop'
 
 const IndexPage = ({
   data: {
@@ -36,9 +37,14 @@ const IndexPage = ({
 }) => (
   <Layout seoTitle={seoTitle}>
     <div id={SECTION_ID.HOME} />
-    <Hero
-      continueToId={SECTION_ID.PROGRAM}
-    >
+    <Hero continueToId={SECTION_ID.PROGRAM}>
+      <HomeHeadingsDesktop
+        brideName={brideName}
+        groomName={groomName}
+        date={date}
+        ceremonyTime={ceremonyTime}
+        place={place}
+      />
       <HomeHeadingsMobile
         brideName={brideName}
         groomName={groomName}

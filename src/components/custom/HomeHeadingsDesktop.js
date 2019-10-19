@@ -5,8 +5,8 @@ import { H1, H2 } from '../basic/Typography'
 import theme from '../../theme'
 import fianceInHeart from '../../images/postavicky-v-srdci.svg'
 
-const mobileOnlyStyle = css`
-  ${theme.media.desktop`
+const desktopOnlyStyle = css`
+  ${theme.media.mobile`
     display: none;
   `}
 `
@@ -14,41 +14,51 @@ const mobileOnlyStyle = css`
 const StyledH1 = styled(H1)`
   color: ${theme.colors.CLOUD_BURST};
   display: block;
+  width: 20%;
+  ${desktopOnlyStyle};
 `
 const StyledH3 = styled(H2)`
   color: ${theme.colors.CLOUD_BURST};
   display: block;
+  ${desktopOnlyStyle};
 `
 
 const StyledImg = styled.img`
-  display: block;
-  background-repeat: no-repeat;
-  height: 30%;
-  ${mobileOnlyStyle};
+  max-height: 100%;
+  height: 100%;
+`
+const TitlesWrapper = styled.div`
+  flex: 1;
+  width: 100%;
+  max-height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  ${desktopOnlyStyle};
 `
 
-const MobileOnlyWrapper = styled.div`
-  ${mobileOnlyStyle};
+const InfoWrapper = styled.div`
+  ${desktopOnlyStyle};
 `
 
-const HomeHeadingsMobile = ({ brideName, groomName, date, place, ceremonyTime }) => (
+const HomeHeadingsDesktop = ({ brideName, groomName, date, place, ceremonyTime }) => (
   <React.Fragment>
-    <MobileOnlyWrapper>
-      <StyledH1 paddingTop="4rem">{brideName}</StyledH1>
-      <StyledH1> & </StyledH1>
+    <StyledH3>...ľúbime sa, berieme sa...</StyledH3>
+    <TitlesWrapper>
       <StyledH1>{groomName}</StyledH1>
-    </MobileOnlyWrapper>
-    <StyledImg src={fianceInHeart} alt="Snubenci v srdci" />
-    <MobileOnlyWrapper>
+      <StyledImg src={fianceInHeart} alt="Snubenci v srdci" />
+      <StyledH1>{brideName}</StyledH1>
+    </TitlesWrapper>
+    <InfoWrapper>
       <StyledH3>
         {date} o {ceremonyTime}
       </StyledH3>
       <StyledH3>{place}</StyledH3>
-    </MobileOnlyWrapper>
+    </InfoWrapper>
   </React.Fragment>
 )
 
-HomeHeadingsMobile.propTypes = {
+HomeHeadingsDesktop.propTypes = {
   brideName: PropTypes.string.isRequired,
   groomName: PropTypes.string.isRequired,
   date: PropTypes.string.isRequired,
@@ -56,4 +66,4 @@ HomeHeadingsMobile.propTypes = {
   ceremonyTime: PropTypes.string.isRequired
 }
 
-export default HomeHeadingsMobile
+export default HomeHeadingsDesktop
