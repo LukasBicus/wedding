@@ -19,7 +19,7 @@ module.exports = {
         short_name: `starter`,
         start_url: `/`,
         display: `minimal-ui`,
-        icon: path.join(__dirname, 'src/images/postavicky.svg')
+        icon: path.join(__dirname, 'src/images/postavicky-v-srdci.svg')
       }
     },
     {
