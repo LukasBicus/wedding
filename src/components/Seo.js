@@ -44,7 +44,6 @@ function Seo({ description, lang, meta, title }) {
     `
   )
   const metaDescription = description || aboutSite.description
-  console.log(`metaDes: ${metaDescription}`)
   return (
     <Helmet
       htmlAttributes={{
@@ -52,14 +51,15 @@ function Seo({ description, lang, meta, title }) {
       }}
       title={title}
       titleTemplate={`%s | ${aboutSite.title}`}
-      meta={
-        (seoKeywords.length > 0
-          ? [{
+      meta={(seoKeywords.length > 0
+        ? [
+          {
             name: 'keywords',
             content: seoKeywords.join(', ')
-          }]
-          : []
-        ).concat(meta)}
+          }
+        ]
+        : []
+      ).concat(meta)}
     >
       <meta
         name="viewport"
@@ -70,10 +70,10 @@ function Seo({ description, lang, meta, title }) {
       <meta property="og:title" content={title} />
       <meta property="og:description" content={metaDescription} />
       <meta property="og:type" content={'website'} />
-      <meta name='twitter:card' content={'summary'} />
-      <meta name='twitter:creator' content={aboutSite.author} />
-      <meta name='twitter:title' content={title} />
-      <meta name='twitter:description' content={metaDescription} />
+      <meta name="twitter:card" content={'summary'} />
+      <meta name="twitter:creator" content={aboutSite.author} />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={metaDescription} />
       <link
         href="https://fonts.googleapis.com/css?family=Amatic+SC&display=swap:200,400"
         rel="stylesheet"
