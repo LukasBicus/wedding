@@ -47,6 +47,7 @@ const Gifts = () => (
         <StyledSection title={header.gifts}>
           <Text.M>{gifts.description}</Text.M>
           <br />
+          <br />
           <ExternalLink to={gifts.link}>{gifts.linkText}</ExternalLink>
         </StyledSection>
       </SinglePageLayout>

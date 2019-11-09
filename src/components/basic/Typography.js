@@ -13,10 +13,12 @@ const createText = ({ fontFamily, tagName, fontSizeDesktop, fontSizeMobile }) =>
   display: inline-block;
   font-family: ${fontFamily};
   font-size: ${fontSizeDesktop}em;
+  color: ${({ color }) => color || 'inherit'};
   ${theme.media.mobile`
     font-size: ${fontSizeMobile}em;
   `};
   font-weight: ${({ isBold }) => (isBold ? 400 : 200)};
+  text-decoration: inherit;
   ${space}
 `
 
