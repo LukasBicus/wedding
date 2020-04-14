@@ -7,7 +7,7 @@ aboutSite:
   author: 'Lukáš Bičuš'
   year: '2019'
   linkToAuthor: https://github.com/LukasBicus
-  title: 'Janka a Lukáš' 
+  title: 'Janka a Lukáš'
   description: 'Ľúbime sa, berieme sa'
 index:
     seoTitle: 'Svadba'
@@ -22,10 +22,10 @@ index:
         program: 'Program'
         transport: 'Doprava'
 header:
-    home: Domov 
-    program: Program 
-    venue: Svadobná sála 
-    church: Kostol 
+    home: Domov
+    program: Program
+    venue: Svadobná sála
+    church: Kostol
     transport: Doprava
     gifts: Dary
 venue:
@@ -40,5 +40,5 @@ gifts:
   description: 'Ďakujeme, že zvažujete nás obdarovať pri našom štarte do spoločného života. Tento excel robíme s cieľom pomôcť vám vybrať originálny dar a nám vyhnúť sa duplikátom.'
   linkText: 'Odkaz na tabuľku'
   link: 'https://docs.google.com/spreadsheets/d/1J2fwZppBjPP0EA3Icwyz7rbp5GokhAFp79W9t_e8mis/edit?usp=sharing'
-  
+
 ---
